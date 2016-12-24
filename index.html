@@ -138,6 +138,12 @@ function draw(){
 
 }
 
-wheel.onload = draw();
+var imagesLoaded=0;
+
+wheel.onload = imagesLoaded++;
+reindeer.onload = imagesLoaded++;
+rudolf.onload = imagesLoaded++;
+
+while(imagesLoaded<4){if(imagesLoaded==3){imagesLoaded++; draw();}}
 
 </script>
