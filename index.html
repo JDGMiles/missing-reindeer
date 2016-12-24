@@ -139,11 +139,14 @@ function draw(){
 }
 
 var imagesLoaded=0;
+var wheelloaded=0;
+var rudolfloaded=0;
+var reindeerloaded=0;
 
-wheel.onload = imagesLoaded++;
-reindeer.onload = imagesLoaded++;
-rudolf.onload = imagesLoaded++;
+if(wheelloaded==0){wheel.onload = imagesLoaded++; wheelloaded++;}
+if(reindeerloaded==0){reindeer.onload = imagesLoaded++; reindeerloaded++;}
+if(rudolfloaded==0){rudolf.onload = imagesLoaded++; rudolfloaded++;}
 
-while(imagesLoaded<4){if(imagesLoaded==3){imagesLoaded++; draw();}}
+while(imagesLoaded<4){if(imagesLoaded==3){imagesLoaded++; setTimeout(draw, 100)}}
 
 </script>
